@@ -3,6 +3,7 @@ const app = express();
 const port = 9000;
 
 app.set('view engine', 'ejs');
+app.use(express.json());
 
 app.get('/', (req, res) => {
     const title = 'header';;
