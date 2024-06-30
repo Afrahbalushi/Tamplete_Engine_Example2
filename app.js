@@ -21,6 +21,16 @@ app.get('/about', (req, res) => {
   res.render('pages/about', { title });
 });
 
+app.get('/data', (req, res) => {
+    const data = { message: 'Hello best programmers!' };
+    res.json(data);
+  });
+  
+  app.post('/data', (req, res) => {
+    console.log('Received data');
+    res.json({ status: 'success'});
+});
+
 
 app.listen(port, () => {
   console.log(`Server is running on ${port}`);
